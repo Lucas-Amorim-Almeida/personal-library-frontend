@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <link rel="stylesheet" href="./app/CSS/global/global.css" />
+    <link rel="stylesheet" href="./app/CSS/pages/index/index.css" />
+
+    <title>Personal Library</title>
+  </head>
+  <body>
+    <header>
+      <a href="#">
+        <div class="logo">
+          <img src="#" alt="Logo" />
+        </div>
+      </a>
+
+      <nav class="logged-options"></nav>
+      <nav class="header-menu">
+        <li><a href="#">Sobre</a></li>
+        <li><a href="#">Contato</a></li>
+        <li><a href="#">Signup</a></li>
+        <li><a href="#">Login</a></li>
+      </nav>
+      <span class="charm--menu-hamburger"></span>
+    </header>
+
+    <main>
+      <section class="user-options"></section>
+      <section class="search-bar">
+        <form id="search-books">
+          <div class="select-wrapper">
+            <select name="search-target" id="search-target">
+              <option value="book" selected>Livros</option>
+              <option value="author">Autores</option>
+            </select>
+            <div class="select-icon">
+              <span class="ep--collection"></span>
+              <span class="ep--avatar"></span>
+            </div>
+            <script src="./app/js/pages/index/search-select-icon.js"></script>
+          </div>
+
+          <input type="text" name="search" id="search" />
+
+          <button type="submit">
+            <span class="charm--search"></span>
+            <p>Buscar</p>
+          </button>
+        </form>
+        <!-- <script src="./app/js/pages/index/searchBooks.js"></script> -->
+      </section>
+
+      <section class="book-list">
+        <table class="list">
+          <thead class="head-list">
+            <th style="width: 20%">Id</th>
+            <th style="width: 20%">Título</th>
+            <th style="width: 20%">Autores</th>
+            <th style="width: 10%">Ano de Publicação</th>
+            <th style="width: 20%">Gêneros</th>
+            <th style="width: 10%">Opções</th>
+          </thead>
+          <tbody>
+            <tr class="row-list">
+              <td>Lorem ipsum dolor sit amet consectetur</td>
+              <td>adipisicing elit. Unde, ratione. Repellendus beatae alias</td>
+              <td>totam quod, vel possimus fuga</td>
+              <td>magnam excepturi. Optio quae non distinctio</td>
+              <td>officia molestias voluptates</td>
+              <td>fuga quas ut.</td>
+            </tr>
+            <tr class="row-list">
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+            </tr>
+            <tr class="row-list">
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+            </tr>
+            <tr class="row-list">
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+    </main>
+  </body>
+  <!-- <script src="./app/js/pages/index/getBooksOnload.js"></script> -->
+</html>

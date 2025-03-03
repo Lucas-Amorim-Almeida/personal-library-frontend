@@ -1,0 +1,16 @@
+:root {
+  --txt-clr-default: #000;
+  --txt-clr-secondary: #fff;
+  --txt-clr-tertiary: #5c5c5c;
+
+  --ff-title: Merriweather;
+  --ff-txt-body: "Open Sans";
+
+  --f1: clamp(1.1rem, 1vh, 1.2rem);
+  --f2: clamp(2rem, 1vh, 2.2rem);
+  --f3: clamp(3rem, 1vh, 3.2rem);
+
+  --clr-primary: #3232a2;
+  --clr-secondary: #ce2f06;
+  --clr-tertiary: #06ce2f;
+}
