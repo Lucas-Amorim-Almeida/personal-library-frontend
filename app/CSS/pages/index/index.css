@@ -1,23 +1,2 @@
 @import "./partials/search-bar.css";
 @import "./partials/book-list.css";
-
-html {
-  position: relative;
-}
-
-header {
-  position: absolute;
-  z-index: 10;
-}
-main {
-  width: 100%;
-  min-height: 100vh;
-  position: absolute;
-  z-index: 5;
-  background-color: azure;
-
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-}

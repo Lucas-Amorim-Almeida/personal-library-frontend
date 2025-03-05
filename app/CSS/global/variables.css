@@ -6,6 +6,7 @@
   --ff-title: Merriweather;
   --ff-txt-body: "Open Sans";
 
+  --f0: clamp(0.8rem, 1vh, 1rem);
   --f1: clamp(1.1rem, 1vh, 1.2rem);
   --f2: clamp(2rem, 1vh, 2.2rem);
   --f3: clamp(3rem, 1vh, 3.2rem);
@@ -13,4 +14,6 @@
   --clr-primary: #3232a2;
   --clr-secondary: #ce2f06;
   --clr-tertiary: #06ce2f;
+
+  --bg-color: azure;
 }

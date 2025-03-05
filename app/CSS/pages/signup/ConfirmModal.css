@@ -1,0 +1,53 @@
+.confirm-modal-content {
+  width: 60%;
+  height: 70%;
+}
+
+.confirm-content-wrapper {
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.confirm-content-wrapper h2 {
+  text-transform: uppercase;
+  font-weight: 700;
+  color: var(--clr-primary);
+}
+
+.confirm-content-wrapper table {
+  width: 90%;
+  padding: 5%;
+}
+
+.btn-wrapper {
+  width: 90%;
+  height: 30%;
+  padding: 3% 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.btn-wrapper button {
+  width: 30%;
+  height: 60%;
+}
+
+.row-name {
+  color: var(--clr-secondary);
+  font-weight: 600;
+  width: 40%;
+  border-right: none;
+}
+.row-data {
+  color: var(--txt-clr-tertiary);
+  border-left: none;
+}
+
+.confirm-content-wrapper tr:nth-child(odd) {
+  background-color: #1c1c1c22;
+}

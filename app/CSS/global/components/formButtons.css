@@ -1,0 +1,29 @@
+.btn-submit,
+.btn-cancel {
+  padding: 10px 5%;
+  width: 30%;
+
+  border: 1px solid var(--txt-clr-tertiary);
+  border-radius: 5px;
+
+  cursor: pointer;
+}
+
+.btn-cancel:hover,
+.btn-submit:hover {
+  box-shadow: inset 2px 2px 2px var(--txt-clr-tertiary);
+
+  text-transform: uppercase;
+  font-weight: 900;
+
+  transition: 100ms;
+}
+
+.btn-submit {
+  background: var(--clr-tertiary);
+  color: var(--txt-clr-secondary);
+}
+.btn-cancel {
+  background: var(--clr-secondary);
+  color: var(--txt-clr-secondary);
+}

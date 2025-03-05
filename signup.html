@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Personal Libray: Cadastro</title>
+
+    <link rel="stylesheet" href="./app/CSS/global/global.css" />
+    <link rel="stylesheet" href="./app/CSS/pages/signup/signup.css" />
+  </head>
+  <body>
+    <header>
+      <a href="./">
+        <div class="logo">
+          <img src="#" alt="Logo" />
+        </div>
+      </a>
+
+      <nav class="logged-options"></nav>
+      <nav class="header-menu">
+        <li><a href="./about.html">Sobre</a></li>
+        <li><a href="./contact.html">Contato</a></li>
+        <li><a href="./login.html">Login</a></li>
+      </nav>
+      <span class="charm--menu-hamburger"></span>
+    </header>
+
+    <main>
+      <h1 class="title">Cadastrar</h1>
+      <section class="signup">
+        <form>
+          <section>
+            <h2>Informações pessoais</h2>
+
+            <div class="flex-container">
+              <fieldset>
+                <label for="full-name">Nome Completo</label>
+                <input type="text" name="full-name" id="full-name" required />
+              </fieldset>
+
+              <fieldset>
+                <label for="birth-date">Data de Nascimento</label>
+                <input type="date" name="birth-date" id="birth-date" required />
+              </fieldset>
+            </div>
+          </section>
+
+          <section>
+            <h2>Contato</h2>
+
+            <fieldset>
+              <label for="email">Email</label>
+              <input type="email" name="email" id="email" required />
+            </fieldset>
+
+            <div class="flex-container">
+              <fieldset>
+                <label for="phone">Celular</label>
+                <input
+                  type="tel"
+                  name="phone"
+                  id="phone"
+                  placeholder="+5599987654321"
+                  pattern="\+\d{13}"
+                  required
+                />
+              </fieldset>
+
+              <fieldset>
+                <label for="phone2">Celular(opcional)</label>
+                <input
+                  type="tel"
+                  name="phone2"
+                  id="phone2"
+                  placeholder="+5599987654321"
+                  pattern="\+\d{13}"
+                />
+              </fieldset>
+            </div>
+          </section>
+
+          <section>
+            <h2>Informações para login</h2>
+            <fieldset>
+              <label for="username">Nickname</label>
+              <input type="text" name="username" id="username" required />
+            </fieldset>
+
+            <fieldset>
+              <label for="password">Senha</label>
+              <input type="password" name="password" id="password" required />
+            </fieldset>
+
+            <fieldset>
+              <label for="confirm-password">Confirme a senha</label>
+              <input
+                type="password"
+                name="confirm-password"
+                id="confirm-password"
+                required
+              />
+            </fieldset>
+          </section>
+
+          <section>
+            <div class="flex-container">
+              <button type="submit" class="btn-submit">Cadastar</button>
+              <button type="button" class="btn-cancel">Cancelar</button>
+            </div>
+            <script src="./app/js/pages/signup/handleSubmit.js"></script>
+            <script src="./app/js/pages/signup/handleCancel.js"></script>
+          </section>
+        </form>
+      </section>
+    </main>
+    <!-- Modal de Mensagem -->
+    <div class="modal msg-modal">
+      <div class="modal-content msg-modal-content">
+        <div class="content-wrapper">
+          <span class="popup-icon">ghm</span>
+          <p class="popup-message">dfgb</p>
+        </div>
+        <button class="action-btn"></button>
+      </div>
+    </div>
+
+    <!-- Modal de confirmação de dados -->
+    <div class="modal confirm-modal">
+      <div class="modal-content confirm-modal-content">
+        <div class="confirm-content-wrapper">
+          <h2>Confira seus Dados</h2>
+          <table>
+            <tbody>
+              <tr>
+                <td class="row-name">Nome completo:</td>
+                <td class="row-data" id="tbl-fullname"></td>
+              </tr>
+              <tr>
+                <td class="row-name">Data de Nascimento:</td>
+                <td class="row-data" id="tbl-birthdate"></td>
+              </tr>
+              <tr>
+                <td class="row-name">Email:</td>
+                <td class="row-data" id="tbl-email"></td>
+              </tr>
+              <tr>
+                <td class="row-name">Celular:</td>
+                <td class="row-data" id="tbl-phone"></td>
+              </tr>
+              <tr>
+                <td class="row-name">Celular2(opcional):</td>
+                <td class="row-data" id="tbl-phone2"></td>
+              </tr>
+              <tr>
+                <td class="row-name">Nickname:</td>
+                <td class="row-data" id="tbl-username"></td>
+              </tr>
+
+            </tbody>
+          </table>
+          
+        </div>
+        <div class="btn-wrapper">
+          <button class="btn-submit" id="submit-data">Enviar</button>
+          <button class="btn-cancel" id="cancel-submit">Cancelar</button>
+        </div>
+      </div>
+      </div>
+    </div>
+  </body>
+</html>

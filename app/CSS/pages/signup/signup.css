@@ -1,0 +1,188 @@
+@import "./ActionModals.css";
+@import "./ConfirmModal.css";
+
+main {
+  padding: 75px 0;
+}
+
+.title {
+  color: var(--clr-primary);
+  font-family: Merriweater;
+  font-size: var(--f2);
+  padding: 20px;
+}
+
+.signup {
+  background: #fff;
+  width: 90%;
+  padding: 2%;
+
+  border: 2px solid var(--clr-primary);
+  border-radius: 10px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.signup form {
+  width: 90%;
+  padding: 1%;
+  gap: 15px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.signup form section {
+  background-color: #afafaf44;
+  width: 100%;
+  padding: 1% 0;
+
+  border-radius: 5px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.signup form section:last-child {
+  padding: 3% 0;
+  background-color: transparent;
+}
+
+.signup form section h2 {
+  font-family: Merriweater;
+  color: var(--clr-secondary);
+}
+
+.signup form fieldset {
+  color: var(--clr-primary);
+
+  width: 100%;
+  padding: 1%;
+
+  border: none;
+
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  justify-content: center;
+}
+
+.signup form fieldset label {
+  font-weight: 700;
+  font-size: var(--f0);
+  padding: 5px 0;
+}
+
+.signup form fieldset input {
+  padding: 5px;
+
+  border-radius: 5px;
+  border: 1px solid var(--clr-secondary);
+  outline: none;
+}
+
+.flex-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  width: 100%;
+}
+
+#full-name {
+  width: 100%;
+}
+
+#birth-date {
+  width: 30%;
+}
+
+#email,
+#phone,
+#phone2 {
+  width: 50%;
+}
+#username,
+#password,
+#confirm-password {
+  width: 30%;
+}
+
+@media (max-width: 1024px) {
+  .flex-container {
+    flex-direction: column;
+  }
+
+  .signup form section button {
+    width: 50%;
+    margin-top: 15px;
+  }
+}
+
+@media (min-width: 1025px) and (max-width: 1250px) {
+  #full-name {
+    width: 70%;
+  }
+
+  #email {
+    width: 50%;
+  }
+
+  #birth-date,
+  #phone,
+  #phone2 {
+    width: 40%;
+  }
+  #username,
+  #password,
+  #confirm-password {
+    width: 40%;
+  }
+}
+
+@media (min-width: 481px) and (max-width: 1024px) {
+  #full-name {
+    width: 70%;
+  }
+
+  #email {
+    width: 50%;
+  }
+
+  #birth-date,
+  #phone,
+  #phone2 {
+    width: 30%;
+  }
+  #username,
+  #password,
+  #confirm-password {
+    width: 40%;
+  }
+}
+
+@media (max-width: 480px) {
+  #full-name {
+    width: 90%;
+  }
+
+  #email {
+    width: 70%;
+  }
+
+  #birth-date,
+  #phone,
+  #phone2 {
+    width: 50%;
+  }
+  #username,
+  #password,
+  #confirm-password {
+    width: 60%;
+  }
+}

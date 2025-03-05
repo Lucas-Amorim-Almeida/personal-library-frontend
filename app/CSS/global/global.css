@@ -2,3 +2,24 @@
 @import "./fonts.css";
 @import "./cssReset.css";
 @import "./components/components.css";
+
+html {
+  position: relative;
+}
+
+header {
+  position: absolute;
+  z-index: 10;
+}
+main {
+  width: 100%;
+  min-height: 100vh;
+  position: absolute;
+  z-index: 5;
+  background-color: var(--bg-color);
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
