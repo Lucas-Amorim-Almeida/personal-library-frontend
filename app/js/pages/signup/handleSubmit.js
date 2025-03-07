@@ -51,7 +51,6 @@ const fetchData = async (formData) => {
       },
       () => {
         // função com redirecionamento para página de login
-        actionBtn.disabled = false;
         window.location.href = "./login.html";
       }
     );
@@ -113,17 +112,12 @@ const handleConfirmModal = (formData) => {
 
     //exibição do modal de mensagem: prossando...
     const actionBtn = document.querySelector(".action-btn");
-    handelMessageModal(
-      {
-        icon: "⌛",
-        msg: "Processado...",
-        btnText: "",
-        btnDisplayProp: "none",
-      },
-      () => {
-        actionBtn.disabled = true;
-      }
-    );
+    handelMessageModal({
+      icon: "⌛",
+      msg: "Processado...",
+      btnText: "",
+      btnDisplayProp: "none",
+    });
 
     await fetchData(formData);
   });
