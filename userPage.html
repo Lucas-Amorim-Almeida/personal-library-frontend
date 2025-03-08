@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <link rel="stylesheet" href="./app/CSS/global/global.css" />
-    <link rel="stylesheet" href="./app/CSS/pages/index/index.css" />
+    <link rel="stylesheet" href="./app/CSS/pages/userPage/userPage.css" />
 
     <title>Personal Library</title>
   </head>
@@ -22,14 +22,12 @@
       <nav class="header-menu">
         <li><a href="./about.html">Sobre</a></li>
         <li><a href="./contact.html">Contato</a></li>
-        <li><span>Olá, <span class="username"></span></li>
-        <li><a href="./">Logout</a></li>
+        <li><span class="ep--avatar-user"></span></li>
       </nav>
       <span class="charm--menu-hamburger"></span>
     </header>
 
     <main>
-      <section class="user-options"></section>
       <section class="search-bar">
         <form id="search-books">
           <div class="select-wrapper">
@@ -51,7 +49,13 @@
             <p>Buscar</p>
           </button>
         </form>
-        <!-- <script src="./app/js/pages/index/searchBooks.js"></script> -->
+        <section class="user-options">
+          <div class="options-wrapper">
+            <button class="btn-wired" id="add-book">Adicionar Livro</button>
+            <button class="btn-wired">Criar uma Coleção</button>
+          </div>
+          <script src="./app/js/pages/userPage/handleClickOptionsButtons.js"></script>
+        </section>
       </section>
     </main>
   </body>

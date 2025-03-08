@@ -1,5 +1,6 @@
 .btn-submit,
-.btn-cancel {
+.btn-cancel,
+.btn-default {
   padding: 10px 5%;
   width: 30%;
 
@@ -26,4 +27,16 @@
 .btn-cancel {
   background: var(--clr-secondary);
   color: var(--txt-clr-secondary);
+}
+
+.btn-wired {
+  background-color: var(--transparent);
+  color: var(--clr-primary);
+
+  border: 2px solid var(--clr-secondary);
+  border-radius: 10px;
+
+  padding: 2% 4%;
+
+  cursor: pointer;
 }

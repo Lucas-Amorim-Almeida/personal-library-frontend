@@ -1,0 +1,567 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Adicionar Livro</title>
+    <link rel="stylesheet" href="./app/CSS/global/global.css" />
+  </head>
+  <body>
+    <header>
+      <a href="./">
+        <div class="logo">
+          <img src="#" alt="Logo" />
+        </div>
+      </a>
+
+      <nav class="logged-options"></nav>
+      <nav class="header-menu">
+        <li><a href="./about.html">Sobre</a></li>
+        <li><a href="./contact.html">Contato</a></li>
+        <li><span class="ep--avatar-user"></span></li>
+      </nav>
+      <span class="charm--menu-hamburger"></span>
+    </header>
+
+    <main>
+      <section class="add-book">
+        <h2 class="title">Adicionar Livro</h2>
+        <form id="add-book-form">
+          <fieldset>
+            <label for="title">Título</label>
+            <input type="text" name="title" id="title" required />
+          </fieldset>
+
+          <fieldset>
+            <label for="author">Autor</label>
+            <input type="text" name="author" id="author" />
+            <button type="button" class="btn-author-modal">+</button>
+          </fieldset>
+
+          <fieldset>
+            <label for="year">Ano de Publicação</label>
+            <input type="number" name="year" id="year" required />
+          </fieldset>
+
+          <fieldset>
+            <label for="edition">Edição</label>
+            <input type="text" name="edition" id="edition" required />
+          </fieldset>
+
+          <fieldset>
+            <label for="volume">Volume</label>
+            <input type="text" name="volume" id="volume" />
+          </fieldset>
+
+          <fieldset>
+            <label for="publisher">Editora</label>
+            <input type="text" name="publisher" id="publisher" required />
+          </fieldset>
+
+          <fieldset>
+            <label for="publication-place">Local de Publicação</label>
+            <input
+              type="text"
+              name="publication-place"
+              id="publication-place"
+              required
+            />
+          </fieldset>
+
+          <fieldset>
+            <label for="isbn">ISBN</label>
+            <input type="text" name="isbn" id="isbn" />
+          </fieldset>
+
+          <fieldset>
+            <label for="genres">Gêneros</label>
+            <ul class="genres-list">
+              <li>
+                <input
+                  type="checkbox"
+                  name="genres"
+                  value="AÇÃO E AVENTURA"
+                  id="acao-e-aventura"
+                />
+                <label for="acao-e-aventura">AÇÃO E AVENTURA</label>
+              </li>
+              <li>
+                <input
+                  type="checkbox"
+                  name="genres"
+                  value="CLÁSSICOS"
+                  id="classicos"
+                />
+                <label for="classicos">CLÁSSICOS</label>
+              </li>
+              <li>
+                <input
+                  type="checkbox"
+                  name="genres"
+                  value="COMÉDIA"
+                  id="comedia"
+                />
+                <label for="comedia">COMÉDIA</label>
+              </li>
+              <li>
+                <input
+                  type="checkbox"
+                  name="genres"
+                  value="CONTOS"
+                  id="contos"
+                />
+                <label for="contos">CONTOS</label>
+              </li>
+              <li>
+                <input type="checkbox" name="genres" value="DRAMA" id="drama" />
+                <label for="drama">DRAMA</label>
+              </li>
+              <li>
+                <input
+                  type="checkbox"
+                  name="genres"
+                  value="FANTASIA"
+                  id="fantasia"
+                />
+                <label for="fantasia">FANTASIA</label>
+              </li>
+              <li>
+                <input
+                  type="checkbox"
+                  name="genres"
+                  value="FICÇÃO CIENTÍFICA"
+                  id="ficcao-cientifica"
+                />
+                <label for="ficcao-cientifica">FICÇÃO CIENTÍFICA</label>
+              </li>
+              <li>
+                <input
+                  type="checkbox"
+                  name="genres"
+                  value="FICÇÃO HISTÓRICA"
+                  id="ficcao-historica"
+                />
+                <label for="ficcao-historica">FICÇÃO HISTÓRICA</label>
+              </li>
+              <li>
+                <input
+                  type="checkbox"
+                  name="genres"
+                  value="FICÇÃO POLICIAL/CRIME"
+                  id="ficcao-policial-crime"
+                />
+                <label for="ficcao-policial-crime">FICÇÃO POLICIAL/CRIME</label>
+              </li>
+              <li>
+                <input
+                  type="checkbox"
+                  name="genres"
+                  value="HORROR/TERROR"
+                  id="horror-terror"
+                />
+                <label for="horror-terror">HORROR/TERROR</label>
+              </li>
+              <li>
+                <input
+                  type="checkbox"
+                  name="genres"
+                  value="MISTÉRIO/SUSPENSE"
+                  id="misterio-suspense"
+                />
+                <label for="misterio-suspense">MISTÉRIO/SUSPENSE</label>
+              </li>
+              <li>
+                <input
+                  type="checkbox"
+                  name="genres"
+                  value="REALISMO MÁGICO"
+                  id="realismo-magico"
+                />
+                <label for="realismo-magico">REALISMO MÁGICO</label>
+              </li>
+              <li>
+                <input
+                  type="checkbox"
+                  name="genres"
+                  value="ROMANCE"
+                  id="romance"
+                />
+                <label for="romance">ROMANCE</label>
+              </li>
+              <li>
+                <input
+                  type="checkbox"
+                  name="genres"
+                  value="ROMANCE CONTEMPORÂNEO"
+                  id="romance-contemporaneo"
+                />
+                <label for="romance-contemporaneo">ROMANCE CONTEMPORÂNEO</label>
+              </li>
+              <li>
+                <input
+                  type="checkbox"
+                  name="genres"
+                  value="ROMANCE HISTÓRICO"
+                  id="romance-historico"
+                />
+                <label for="romance-historico">ROMANCE HISTÓRICO</label>
+              </li>
+              <li>
+                <input
+                  type="checkbox"
+                  name="genres"
+                  value="CHICK-LIT"
+                  id="chick-lit"
+                />
+                <label for="chick-lit">CHICK-LIT</label>
+              </li>
+              <li>
+                <input
+                  type="checkbox"
+                  name="genres"
+                  value="ROMANCE DE ÉPOCA"
+                  id="romance-de-epoca"
+                />
+                <label for="romance-de-epoca">ROMANCE DE ÉPOCA</label>
+              </li>
+              <li>
+                <input
+                  type="checkbox"
+                  name="genres"
+                  value="THRILLER/PSICOLÓGICO"
+                  id="thriller-psicologico"
+                />
+                <label for="thriller-psicologico">THRILLER/PSICOLÓGICO</label>
+              </li>
+              <li>
+                <input
+                  type="checkbox"
+                  name="genres"
+                  value="TRAGÉDIA"
+                  id="tragedia"
+                />
+                <label for="tragedia">TRAGÉDIA</label>
+              </li>
+              <li>
+                <input
+                  type="checkbox"
+                  name="genres"
+                  value="WESTERN/FAROESTE"
+                  id="western-faroeste"
+                />
+                <label for="western-faroeste">WESTERN/FAROESTE</label>
+              </li>
+              <li>
+                <input
+                  type="checkbox"
+                  name="genres"
+                  value="YOUNG ADULT (YA)"
+                  id="young-adult-ya"
+                />
+                <label for="young-adult-ya">YOUNG ADULT (YA)</label>
+              </li>
+              <li>
+                <input
+                  type="checkbox"
+                  name="genres"
+                  value="DISTOPIA"
+                  id="distopia"
+                />
+                <label for="distopia">DISTOPIA</label>
+              </li>
+              <li>
+                <input
+                  type="checkbox"
+                  name="genres"
+                  value="AUTOBIOGRAFIA"
+                  id="autobiografia"
+                />
+                <label for="autobiografia">AUTOBIOGRAFIA</label>
+              </li>
+              <li>
+                <input
+                  type="checkbox"
+                  name="genres"
+                  value="BIOGRAFIA"
+                  id="biografia"
+                />
+                <label for="biografia">BIOGRAFIA</label>
+              </li>
+              <li>
+                <input
+                  type="checkbox"
+                  name="genres"
+                  value="MEMÓRIAS"
+                  id="memorias"
+                />
+                <label for="memorias">MEMÓRIAS</label>
+              </li>
+              <li>
+                <input
+                  type="checkbox"
+                  name="genres"
+                  value="HISTÓRIA"
+                  id="historia"
+                />
+                <label for="historia">HISTÓRIA</label>
+              </li>
+              <li>
+                <input
+                  type="checkbox"
+                  name="genres"
+                  value="CIÊNCIA E TECNOLOGIA"
+                  id="ciencia-e-tecnologia"
+                />
+                <label for="ciencia-e-tecnologia">CIÊNCIA E TECNOLOGIA</label>
+              </li>
+              <li>
+                <input
+                  type="checkbox"
+                  name="genres"
+                  value="ECONOMIA E NEGÓCIOS"
+                  id="economia-e-negocios"
+                />
+                <label for="economia-e-negocios">ECONOMIA E NEGÓCIOS</label>
+              </li>
+              <li>
+                <input
+                  type="checkbox"
+                  name="genres"
+                  value="EDUCAÇÃO"
+                  id="educacao"
+                />
+                <label for="educacao">EDUCAÇÃO</label>
+              </li>
+              <li>
+                <input
+                  type="checkbox"
+                  name="genres"
+                  value="FILOSOFIA"
+                  id="filosofia"
+                />
+                <label for="filosofia">FILOSOFIA</label>
+              </li>
+              <li>
+                <input
+                  type="checkbox"
+                  name="genres"
+                  value="PSICOLOGIA"
+                  id="psicologia"
+                />
+                <label for="psicologia">PSICOLOGIA</label>
+              </li>
+              <li>
+                <input
+                  type="checkbox"
+                  name="genres"
+                  value="RELIGIÃO/ESPIRITUALIDADE"
+                  id="religiao-espiritualidade"
+                />
+                <label for="religiao-espiritualidade"
+                  >RELIGIÃO/ESPIRITUALIDADE</label
+                >
+              </li>
+              <li>
+                <input
+                  type="checkbox"
+                  name="genres"
+                  value="AUTOAJUDA"
+                  id="autoajuda"
+                />
+                <label for="autoajuda">AUTOAJUDA</label>
+              </li>
+              <li>
+                <input
+                  type="checkbox"
+                  name="genres"
+                  value="SAÚDE E BEM-ESTAR"
+                  id="saude-e-bem-estar"
+                />
+                <label for="saude-e-bem-estar">SAÚDE E BEM-ESTAR</label>
+              </li>
+              <li>
+                <input
+                  type="checkbox"
+                  name="genres"
+                  value="VIAGENS"
+                  id="viagens"
+                />
+                <label for="viagens">VIAGENS</label>
+              </li>
+              <li>
+                <input
+                  type="checkbox"
+                  name="genres"
+                  value="ARTE E DESIGN"
+                  id="arte-e-design"
+                />
+                <label for="arte-e-design">ARTE E DESIGN</label>
+              </li>
+              <li>
+                <input
+                  type="checkbox"
+                  name="genres"
+                  value="GASTRONOMIA/CULINÁRIA"
+                  id="gastronomia-culinaria"
+                />
+                <label for="gastronomia-culinaria">GASTRONOMIA/CULINÁRIA</label>
+              </li>
+              <li>
+                <input
+                  type="checkbox"
+                  name="genres"
+                  value="ENSAIOS"
+                  id="ensaios"
+                />
+                <label for="ensaios">ENSAIOS</label>
+              </li>
+              <li>
+                <input
+                  type="checkbox"
+                  name="genres"
+                  value="JORNALISMO/REPORTAGEM"
+                  id="jornalismo-reportagem"
+                />
+                <label for="jornalismo-reportagem">JORNALISMO/REPORTAGEM</label>
+              </li>
+              <li>
+                <input
+                  type="checkbox"
+                  name="genres"
+                  value="POLÍTICA E SOCIEDADE"
+                  id="politica-e-sociedade"
+                />
+                <label for="politica-e-sociedade">POLÍTICA E SOCIEDADE</label>
+              </li>
+              <li>
+                <input
+                  type="checkbox"
+                  name="genres"
+                  value="CONTOS DE FADAS"
+                  id="contos-de-fadas"
+                />
+                <label for="contos-de-fadas">CONTOS DE FADAS</label>
+              </li>
+              <li>
+                <input
+                  type="checkbox"
+                  name="genres"
+                  value="LIVROS ILUSTRADOS"
+                  id="livros-ilustrados"
+                />
+                <label for="livros-ilustrados">LIVROS ILUSTRADOS</label>
+              </li>
+              <li>
+                <input
+                  type="checkbox"
+                  name="genres"
+                  value="FICÇÃO JUVENIL"
+                  id="ficcao-juvenil"
+                />
+                <label for="ficcao-juvenil">FICÇÃO JUVENIL</label>
+              </li>
+              <li>
+                <input
+                  type="checkbox"
+                  name="genres"
+                  value="FÁBULAS"
+                  id="fabulas"
+                />
+                <label for="fabulas">FÁBULAS</label>
+              </li>
+              <li>
+                <input
+                  type="checkbox"
+                  name="genres"
+                  value="POESIA LÍRICA"
+                  id="poesia-lirica"
+                />
+                <label for="poesia-lirica">POESIA LÍRICA</label>
+              </li>
+              <li>
+                <input
+                  type="checkbox"
+                  name="genres"
+                  value="POESIA ÉPICA"
+                  id="poesia-epica"
+                />
+                <label for="poesia-epica">POESIA ÉPICA</label>
+              </li>
+              <li>
+                <input
+                  type="checkbox"
+                  name="genres"
+                  value="TRAGÉDIA TEATRAL"
+                  id="tragedia-teatral"
+                />
+                <label for="tragedia-teatral">TRAGÉDIA TEATRAL</label>
+              </li>
+              <li>
+                <input
+                  type="checkbox"
+                  name="genres"
+                  value="COMÉDIA TEATRAL"
+                  id="comedia-teatral"
+                />
+                <label for="comedia-teatral">COMÉDIA TEATRAL</label>
+              </li>
+              <li>
+                <input
+                  type="checkbox"
+                  name="genres"
+                  value="DRAMA TEATRAL"
+                  id="drama-teatral"
+                />
+                <label for="drama-teatral">DRAMA TEATRAL</label>
+              </li>
+              <li>
+                <input
+                  type="checkbox"
+                  name="genres"
+                  value="ANTOLOGIAS"
+                  id="antologias"
+                />
+                <label for="antologias">ANTOLOGIAS</label>
+              </li>
+              <li>
+                <input
+                  type="checkbox"
+                  name="genres"
+                  value="MANGAS E QUADRINHOS"
+                  id="mangas-e-quadrinhos"
+                />
+                <label for="mangas-e-quadrinhos">MANGAS E QUADRINHOS</label>
+              </li>
+              <li>
+                <input
+                  type="checkbox"
+                  name="genres"
+                  value="LIVROS INTERATIVOS"
+                  id="livros-interativos"
+                />
+                <label for="livros-interativos">LIVROS INTERATIVOS</label>
+              </li>
+              <li>
+                <input
+                  type="checkbox"
+                  name="genres"
+                  value="LITERATURA EXPERIMENTAL"
+                  id="literatura-experimental"
+                />
+                <label for="literatura-experimental"
+                  >LITERATURA EXPERIMENTAL</label
+                >
+              </li>
+            </ul>
+          </fieldset>
+
+          <fieldset>
+            <button type="submit">Adicionar Livro</button>
+          </fieldset>
+        </form>
+      </section>
+    </main>
+
+    <script src="./app/JS/global/global.js"></script>
+  </body>
+</html>

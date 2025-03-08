@@ -1,0 +1,53 @@
+.ep--avatar-user {
+  cursor: pointer;
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  --svg: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1024 1024'%3E%3Cpath fill='%23000' d='M628.736 528.896A416 416 0 0 1 928 928H96a415.87 415.87 0 0 1 299.264-399.104L512 704zM720 304a208 208 0 1 1-416 0a208 208 0 0 1 416 0'/%3E%3C/svg%3E");
+  background-color: currentColor;
+  -webkit-mask-image: var(--svg);
+  mask-image: var(--svg);
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+  -webkit-mask-size: 100% 100%;
+  mask-size: 100% 100%;
+}
+
+.ep--avatar-user:hover {
+  color: var(--clr-secondary);
+  transition: 150ms;
+}
+
+.search-bar {
+  flex-direction: column;
+  gap: 40px;
+}
+
+.user-options {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+.user-options .options-wrapper {
+  width: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+@media (max-width: 720px) {
+  .user-options .options-wrapper {
+    flex-direction: column;
+    justify-content: center;
+    gap: 10px;
+  }
+  .btn-wired {
+    width: 70%;
+  }
+}
+@media (max-width: 500px) {
+  .btn-wired {
+    width: 100%;
+  }
+}
