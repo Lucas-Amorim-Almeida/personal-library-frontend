@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Adicionar Livro</title>
     <link rel="stylesheet" href="./app/CSS/global/global.css" />
+    <link rel="stylesheet" href="./app/CSS/pages/addBook/addBook.css" />
   </head>
   <body>
     <header>
@@ -33,9 +34,14 @@
           </fieldset>
 
           <fieldset>
-            <label for="author">Autor</label>
-            <input type="text" name="author" id="author" />
-            <button type="button" class="btn-author-modal">+</button>
+            <label for="author">Autor(es)</label>
+            <input
+              type="text"
+              name="author"
+              id="author"
+              placeholder="Use ; para separar o nome dos authores"
+              required
+            />
           </fieldset>
 
           <fieldset>
@@ -50,7 +56,7 @@
 
           <fieldset>
             <label for="volume">Volume</label>
-            <input type="text" name="volume" id="volume" />
+            <input type="number" name="volume" id="volume" />
           </fieldset>
 
           <fieldset>
@@ -555,13 +561,83 @@
             </ul>
           </fieldset>
 
-          <fieldset>
-            <button type="submit">Adicionar Livro</button>
+          <fieldset class="btn-container">
+            <div class="btn-wrapper">
+              <button type="submit" class="btn-submit">Adicionar Livro</button>
+              <button type="button" class="btn-cancel">Cancelar</button>
+            </div>
           </fieldset>
+          <script src="./app/js/pages/addBook/handleCancel.js"></script>
+          <script src="./app/js/pages/addBook/handleSubmit.js"></script>
         </form>
       </section>
     </main>
+    <!-- Modal de Mensagem -->
+    <div class="modal msg-modal">
+      <div class="modal-content msg-modal-content">
+        <div class="content-wrapper">
+          <span class="popup-icon">ghm</span>
+          <p class="popup-message">dfgb</p>
+        </div>
+        <button class="action-btn"></button>
+      </div>
+    </div>
 
-    <script src="./app/JS/global/global.js"></script>
+    <!-- Modal de confirmação de dados -->
+    <div class="modal confirm-modal">
+      <div class="modal-content confirm-modal-content">
+        <div class="confirm-content-wrapper">
+          <h2>Confira os Dados</h2>
+          <table>
+            <tbody>
+              <tr>
+                <td class="row-name">Título:</td>
+                <td class="row-data" id="tbl-title"></td>
+              </tr>
+              <tr>
+                <td class="row-name">Autor(es):</td>
+                <td class="row-data" id="tbl-author"></td>
+              </tr>
+              <tr>
+                <td class="row-name">Ano de Publicaçao:</td>
+                <td class="row-data" id="tbl-year"></td>
+              </tr>
+              <tr>
+                <td class="row-name">Edição:</td>
+                <td class="row-data" id="tbl-edition"></td>
+              </tr>
+              <tr>
+                <td class="row-name">Volume:</td>
+                <td class="row-data" id="tbl-volume"></td>
+              </tr>
+              <tr>
+                <td class="row-name">Editora:</td>
+                <td class="row-data" id="tbl-publisher"></td>
+              </tr>
+              <tr>
+                <td class="row-name">Local de Publicação:</td>
+                <td class="row-data" id="tbl-city"></td>
+              </tr>
+              <tr>
+                <td class="row-name">ISBN:</td>
+                <td class="row-data" id="tbl-isbn"></td>
+              </tr>
+              <tr>
+                <td class="row-name">Gêneros:</td>
+                <td class="row-data" id="tbl-genre"></td>
+              </tr>
+
+            </tbody>
+          </table>
+          
+        </div>
+        <div class="btn-wrapper">
+          <button class="btn-submit" id="submit-data">Enviar</button>
+          <button class="btn-cancel" id="cancel-submit">Cancelar</button>
+        </div>
+      </div>
+      </div>
+    </div>
+
   </body>
 </html>

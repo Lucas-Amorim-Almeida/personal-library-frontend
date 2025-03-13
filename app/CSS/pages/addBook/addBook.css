@@ -1,0 +1,122 @@
+.add-book {
+  background-color: var(--txt-clr-secondary);
+  color: var(--clr-primary);
+
+  width: 70%;
+  margin: 10% 0;
+  padding: 2% 0;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  border: 3px solid var(--clr-primary);
+  border-radius: 15px;
+}
+
+.title {
+  padding: 2%;
+  font-family: var(--ff-title);
+  font-size: var(--f2);
+}
+
+.add-book form {
+  width: 90%;
+}
+
+.add-book form fieldset {
+  padding: 4px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  justify-content: center;
+
+  border: none;
+
+  font-weight: 600;
+}
+.add-book form fieldset label {
+  padding: 5px 0;
+}
+.add-book form fieldset input {
+  border: 1px solid var(--clr-secondary);
+  border-radius: 4px;
+  outline: none;
+
+  padding: 4px;
+}
+
+.add-book ul {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 10px;
+}
+.add-book ul li {
+  display: flex;
+  flex-wrap: no-wrap;
+  align-items: center;
+  gap: 2px;
+}
+.add-book li label {
+  color: var(--clr-secondary);
+  font-size: var(--f0);
+  text-transform: lowercase;
+}
+
+.add-book .btn-container {
+  width: 100%;
+  padding: 8% 4% 4% 4%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn-container .btn-wrapper {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+.btn-container button {
+  width: 40%;
+}
+
+.charm--plus {
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  --svg: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath fill='none' stroke='%23000' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='M12.75 7.75h-10m5-5v10'/%3E%3C/svg%3E");
+  background-color: currentColor;
+  -webkit-mask-image: var(--svg);
+  mask-image: var(--svg);
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+  -webkit-mask-size: 100% 100%;
+  mask-size: 100% 100%;
+}
+
+@media (max-width: 740px) {
+  .add-book {
+    width: 90%;
+  }
+  .btn-wrapper {
+    flex-direction: column;
+    width: 100%;
+    gap: 10px;
+  }
+
+  .btn-wrapper button {
+    width: 100%;
+  }
+}
+
+@media (max-width: 520px) {
+  .add-book {
+    margin: 16% 0;
+  }
+}
