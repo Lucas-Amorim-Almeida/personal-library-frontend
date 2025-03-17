@@ -5,5 +5,5 @@ addBook.addEventListener("click", () => {
 
 const createCollection = document.querySelector("#create-collection");
 createCollection.addEventListener("click", () => {
-  window.location.href = "./createCollection.html";
+  document.querySelector(".create-collection").style.display = "flex";
 });

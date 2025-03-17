@@ -1,0 +1,112 @@
+.modal-content {
+  width: 50%;
+  height: 85%;
+}
+.content-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 90%;
+}
+
+.content-wrapper .title {
+  text-align: center;
+  font-size: var(--f2);
+  font-family: var(--ff-title);
+  color: var(--clr-primary);
+}
+
+.content-wrapper form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  width: 100%;
+  padding: 5%;
+}
+
+.content-wrapper form fieldset {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+
+  gap: 5px;
+  width: 100%;
+
+  border: none;
+}
+
+.content-wrapper form label {
+  color: var(--clr-primary);
+  font-weight: 700;
+}
+
+.content-wrapper form fieldset input[type="text"],
+textarea {
+  width: 100%;
+  padding: 4px;
+
+  border: 1px solid var(--clr-secondary);
+  border-radius: 5px;
+  outline: none;
+}
+
+.btn-container,
+.btn-wrapper {
+  width: 100%;
+}
+.btn-wrapper {
+  gap: 15px;
+}
+
+.btn-wrapper button {
+  width: 45%;
+}
+.btn-wrapper button:hover {
+  text-transform: none;
+}
+
+#description {
+  height: 24vh;
+}
+
+#visibility-fieldset {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+}
+#visibility-fieldset label {
+  margin-right: 5px;
+}
+
+@media (max-width: 1130px) {
+  .modal-content {
+    width: 60%;
+  }
+}
+
+@media (max-width: 870px) {
+  .btn-wrapper {
+    flex-direction: column;
+    align-items: center;
+  }
+  .btn-wrapper button {
+    width: 100%;
+  }
+}
+
+@media (max-width: 730px) {
+  .modal-content {
+    width: 80%;
+  }
+}
+@media (max-width: 530px) {
+  #visibility-fieldset {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}

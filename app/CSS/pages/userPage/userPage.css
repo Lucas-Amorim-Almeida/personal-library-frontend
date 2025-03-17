@@ -1,3 +1,6 @@
+@import "./partials/createCollectionModal.css";
+@import "./partials/addBookToCollectionModal.css";
+
 .ep--avatar-user {
   cursor: pointer;
   display: inline-block;

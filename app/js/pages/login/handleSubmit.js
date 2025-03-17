@@ -54,6 +54,7 @@ const fetchData = async (formData) => {
 
   localStorage.setItem("token", JSON.stringify(user.token));
   localStorage.setItem("username", JSON.stringify(user.username));
+  localStorage.setItem("userID", JSON.stringify(user.id));
 
   //exibição do modal de mensagem de sucesso
   setTimeout(

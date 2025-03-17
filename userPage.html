@@ -9,6 +9,8 @@
     <link rel="stylesheet" href="./app/CSS/pages/userPage/userPage.css" />
 
     <title>Personal Library</title>
+
+    <script src="./app/js/pages/userPage/onloadGetCollections.js"></script>
   </head>
   <body>
     <header>
@@ -52,11 +54,106 @@
         <section class="user-options">
           <div class="options-wrapper">
             <button class="btn-wired" id="add-book">Adicionar Livro</button>
-            <button class="btn-wired">Criar uma Coleção</button>
+            <button class="btn-wired" id="create-collection">
+              Criar uma Coleção
+            </button>
           </div>
           <script src="./app/js/pages/userPage/handleClickOptionsButtons.js"></script>
         </section>
       </section>
     </main>
   </body>
+  <!-- Modal de Mensagem -->
+  <div class="modal msg-modal">
+    <div class="modal-content msg-modal-content">
+      <div class="content-wrapper">
+        <span class="popup-icon"></span>
+        <p class="popup-message"></p>
+      </div>
+      <button class="action-btn"></button>
+    </div>
+  </div>
+  <!--Modal de criação de coleções-->
+  <div class="modal create-collection">
+    <div class="modal-content">
+      <div class="content-wrapper">
+        <h2 class="title">Criar coleção</h2>
+
+        <form id="create-collection-form">
+          <fieldset>
+            <label for="title">Nome da coleção</label>
+            <input type="text" name="title" id="title" required />
+          </fieldset>
+
+          <fieldset id="visibility-fieldset">
+            <label>Visibilidade: </label>
+            <div class="radio-wapper">
+              <input
+                type="radio"
+                name="visibility"
+                id="private"
+                value="private"
+                checked
+              />
+              <label for="private">Privado</label>
+              <input
+                type="radio"
+                name="visibility"
+                id="public"
+                value="public"
+              />
+              <label for="public">Publico</label>
+            </div>
+          </fieldset>
+
+          <fieldset>
+            <label for="description">Descrição</label>
+            <textarea name="description" id="description"></textarea>
+          </fieldset>
+
+          <fieldset class="btn-container">
+            <div class="btn-wrapper">
+              <button class="btn-submit" id="submit-data">
+                Adicionar Livro
+              </button>
+              <button class="btn-cancel" id="cancel-submit">Cancelar</button>
+            </div>
+          </fieldset>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal de adicionar livro -->
+  <div class="modal add-book-collection">
+    <div class="modal-content">
+      <div class="content-wrapper">
+        <h2 class="title">Adicione um livro a coleção</h2>
+
+        <section class="search-wrapper">
+          <input
+            type="text"
+            name="find-book"
+            id="find-book"
+            placeholder="Título do livro"
+          />
+          <button type="button" id="btn-find-book">
+            <span class="charm--search"></span>
+          </button>
+        </section>
+
+        <section class="added-books">
+          <table id="found-books-list">
+            <!--adiciona corpo e linhas linhas via js: resultado da busca-->
+          </table>
+        </section>
+
+        <div class="btn-wrapper">
+          <button class="btn-submit" id="submit-collection">Criar</button>
+          <button class="btn-cancel" id="cancel-submit">Cancelar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="./app/js/pages/userPage/addCollectionModal/handleAddCollection.js"></script>
 </html>
