@@ -20,6 +20,8 @@
 .confirm-content-wrapper table {
   width: 90%;
   padding: 5%;
+
+  overflow: auto;
 }
 
 .btn-wrapper {

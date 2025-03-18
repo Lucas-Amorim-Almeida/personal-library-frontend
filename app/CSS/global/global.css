@@ -2,6 +2,7 @@
 @import "./fonts.css";
 @import "./cssReset.css";
 @import "./components/components.css";
+@import "./components/card.css";
 
 html {
   position: relative;

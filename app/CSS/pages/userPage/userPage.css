@@ -1,5 +1,10 @@
 @import "./partials/createCollectionModal.css";
 @import "./partials/addBookToCollectionModal.css";
+@import "./partials/collections.css";
+
+.search-bar {
+  margin-top: 60px;
+}
 
 .ep--avatar-user {
   cursor: pointer;
