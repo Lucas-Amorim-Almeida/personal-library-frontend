@@ -67,3 +67,15 @@ header {
     display: inline-block;
   }
 }
+
+.ep--avatar {
+  cursor: pointer;
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+}
+
+.ep--avatar:hover {
+  color: var(--clr-secondary);
+  transition: 150ms;
+}

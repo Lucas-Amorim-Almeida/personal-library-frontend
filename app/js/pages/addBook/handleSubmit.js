@@ -3,14 +3,16 @@ const uriAPI = "https://personal-library-kjm4.onrender.com/api/v1";
 const form = document.querySelector("form");
 
 const fetchData = async (formData) => {
-  const token = localStorage.getItem("token");
+  const stringDataToken = localStorage.getItem("token");
+  const dataToken = JSON.parse(stringDataToken);
+  const token = dataToken.token;
 
   const response = await fetch(`${uriAPI}/book`, {
     method: "post",
     headers: {
       "Content-type": "application/json",
       //deve-se remover as aspas que vem no token salvo no localStorage
-      Authorization: `Bearer ${token.slice(1, token.length - 1)}`,
+      Authorization: `Bearer ${token}`,
     },
     body: JSON.stringify(formData),
   });

@@ -50,10 +50,14 @@ const createCardElement = (data) => {
   cardData.appendChild(setCardData(data));
 
   const card = document.createElement("div");
-  card.className = "card";
+  card.classList.add("card");
+  card.classList.add("item-collection");
   card.appendChild(cardTag);
   card.appendChild(cardImage);
   card.appendChild(cardData);
+  card.addEventListener("click", () => {
+    window.location.href = `./collection.html?id=${data._id}`;
+  });
 
   return card;
 };
@@ -62,13 +66,17 @@ const handleShowCollections = (collections) => {
   const collectionContainer = document.querySelector(".collections-container");
   collections.forEach((collection) => {
     const collectionCard = createCardElement(collection);
+
     collectionContainer.appendChild(collectionCard);
   });
 };
 
 const getUserCollections = async () => {
   const userID = localStorage.getItem("userID");
-  const token = localStorage.getItem("token");
+  const stringDataToken = localStorage.getItem("token");
+  const dataToken = JSON.parse(stringDataToken);
+  const token = dataToken.token;
+
   const url = `https://personal-library-kjm4.onrender.com/api/v1/collection/user/${userID.slice(
     1,
     userID.length - 1
@@ -76,7 +84,7 @@ const getUserCollections = async () => {
   const userCollections = fetch(url, {
     method: "GET",
     headers: {
-      Authorization: `Bearer ${token.slice(1, token.length - 1)}`,
+      Authorization: `Bearer ${token}`,
     },
   })
     .then((response) => {

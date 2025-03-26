@@ -22,6 +22,18 @@ const handelMessageModal = (
   modal.style.display = "flex";
 };
 
+const saveDataInLocalStorage = (user) => {
+  const currentDate = new Date();
+  const expires = currentDate.getTime() + 6 * 60 * 60 * 1000;
+  const tokenToStorage = {
+    token: user.token,
+    expires: expires,
+  };
+
+  localStorage.setItem("token", JSON.stringify(tokenToStorage));
+  localStorage.setItem("username", JSON.stringify(user.username));
+  localStorage.setItem("userID", JSON.stringify(user.id));
+};
 const fetchData = async (formData) => {
   const uriAPI = "https://personal-library-kjm4.onrender.com/api/v1";
 
@@ -51,11 +63,7 @@ const fetchData = async (formData) => {
   }
 
   const user = await response.json();
-
-  localStorage.setItem("token", JSON.stringify(user.token));
-  localStorage.setItem("username", JSON.stringify(user.username));
-  localStorage.setItem("userID", JSON.stringify(user.id));
-
+  saveDataInLocalStorage(user);
   //exibição do modal de mensagem de sucesso
   setTimeout(
     () =>

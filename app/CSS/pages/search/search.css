@@ -1,0 +1,11 @@
+@import "./search-result-container.css";
+
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: start;
+
+  /* temp */
+  padding-top: 100px;
+}

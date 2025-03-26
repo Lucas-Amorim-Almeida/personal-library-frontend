@@ -18,13 +18,15 @@ cancelBtn.forEach((btn) =>
 const uriAPI = "https://personal-library-kjm4.onrender.com/api/v1";
 
 const saveCollection = async (formData) => {
-  console.log(formData);
-  const token = localStorage.getItem("token");
+  const stringDataToken = localStorage.getItem("token");
+  const dataToken = JSON.parse(stringDataToken);
+  const token = dataToken.token;
+
   const response = await fetch(`${uriAPI}/collection`, {
     method: "post",
     headers: {
       "Content-type": "application/json",
-      Authorization: `Bearer ${token.slice(1, token.length - 1)}`,
+      Authorization: `Bearer ${token}`,
     },
     body: JSON.stringify(formData),
   });

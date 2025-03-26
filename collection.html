@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Coleção</title>
+
+    <link rel="stylesheet" href="./app/CSS/global/global.css" />
+    <link rel="stylesheet" href="./app/CSS/pages/collection/collection.css" />
+    <!-- <script src="./app/js/pages/collection/onloadGetCollectionData.js"></script> -->
+  </head>
+  <body>
+    <header>
+      <a href="./">
+        <div class="logo">
+          <img src="#" alt="Logo" />
+        </div>
+      </a>
+
+      <nav class="logged-options"></nav>
+      <nav class="header-menu">
+        <li><a href="./about.html">Sobre</a></li>
+        <li><a href="./contact.html">Contato</a></li>
+        <li><span class="ep--avatar"></span></li>
+      </nav>
+      <span class="charm--menu-hamburger"></span>
+    </header>
+
+    <main>
+      <section class="collection-info">
+          <div class="collection-cover">
+            <div class="cover-container">
+              <span class="ic--outline-image-not-supported icon"></span>
+            </div>
+          </div>
+
+          <article class="text-info">
+            <h2 class="collection-title">Nome da coleção</h2>
+
+            <section class="collection-description">
+              <h3>Descrição:</h3>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Adipisci cupiditate maiores error consequatur corporis voluptas
+                expedita harum culpa iusto dicta, aspernatur, rem numquam
+                architecto mollitia amet laboriosam odio nostrum quos!
+              </p>
+            </section>
+
+            <section class="collection-visibility">
+              <h3>Visibilidade:</h3>
+              <p>Privado</p>
+            </section>
+          </article>
+      </section>
+
+      <section class="collection-content">
+        <div class="section-header">
+          <h2 class="section-title">Livros</h2>
+
+          <div class="view-selection">
+            <input type="radio" id="grid" name="view" value="grid" checked>
+            <label for="grid" class="charm--layout-grid icon"></label>
+            <input type="radio" id="list" name="view" value="list">
+            <label for="list" class="charm--layout-list icon"></label>
+          </div>
+        </div>
+
+        <div class="collection-books">
+          <!--aqui teremos os cards dos livros: card(default -> grid view) list-card(para list view)-->
+
+          <div class="card-book grid-view"><!--grid-view-->
+            <div class="cover-container">
+              <div class="cover-wrapper">
+                <span class="ic--outline-image-not-supported cover"></span>
+              </div>
+            </div>
+
+            <div class="info-container">
+              <h3 class="book-title">Livro 11111111111111111111 111111111</h3>
+              <p class="author">
+                <span class="span-title">Autor(es):</span>
+
+                <ul class="author-list">
+                  <li>Autor 1</li>
+                  <li>Autor 2</li>
+                </ul>
+
+              </p>
+              
+              <p class="year-container">
+                <span class="span-title">Ano: </span>
+                <span class="publish-year">2000</span>
+              </p>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+      <section class="test"></section>
+    </main>
+  </body>
+</html>

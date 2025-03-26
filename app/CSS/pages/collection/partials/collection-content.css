@@ -1,0 +1,55 @@
+.collection-content {
+  width: 100%;
+  padding: 2%;
+
+  /* background-color: yellowgreen; */
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: start;
+
+  border-top: 2px solid var(--clr-primary);
+
+  & .section-header {
+    width: 100%;
+    margin-bottom: 20px;
+
+    display: flex;
+    align-items: start;
+    justify-content: space-between;
+
+    & .section-title {
+      font-size: var(--f2);
+      color: var(--clr-primary);
+      font-family: var(--ff-title);
+    }
+
+    & .icon {
+      width: 24px;
+      height: 24px;
+    }
+  }
+
+  & .view-selection input[type="radio"] {
+    display: none;
+  }
+
+  & .view-selection label {
+    cursor: pointer;
+    color: var(--txt-clr-tertiary);
+    font-size: var(--f1);
+  }
+
+  & .view-selection input[type="radio"]:checked + label {
+    background-color: var(--clr-secondary);
+  }
+
+  & .collection-books {
+    width: 100%;
+    gap: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: start;
+    justify-content: start;
+  }
+}
